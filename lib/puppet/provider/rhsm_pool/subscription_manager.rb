@@ -83,7 +83,7 @@ mk_resource_methods
         subscription.store(:active, value)
         next
       end
-      if line =~ /^\s*System Type:\s*([^:]+)$/
+      if line =~ /^\s*(System|Entitlement) Type:\s*([^:]+)$/
         value = $1.strip.to_sym
         subscription.store(:system_type, value)
         # this is the last item output
